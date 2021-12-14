@@ -157,6 +157,8 @@ class BuildCommand extends Command
         }
 
         $html = str_replace('<h2>', '[break]<h2>', $html);
+        $html = str_replace("</h1>\n[break]<h2>", '</h1><h2>', $html);
+
         $html = str_replace("<blockquote>\n<p>{notice}", "<blockquote class='notice'><p><strong>Notice:</strong>", $html);
         $html = str_replace("<blockquote>\n<p>{warning}", "<blockquote class='warning'><p><strong>Warning:</strong>", $html);
         $html = str_replace("<blockquote>\n<p>{quote}", "<blockquote class='quote'><p>", $html);
@@ -202,9 +204,10 @@ class BuildCommand extends Command
         $pdf->setAutoBottomMargin = 'pad';
 
         $tocLevels = $config['toc_levels'];
+        $h2bookmarks = $config['h2bookmarks'];
 
         $pdf->h2toc = $tocLevels;
-        $pdf->h2bookmarks = $tocLevels;
+        $pdf->h2bookmarks = $h2bookmarks;
 
         $pdf->SetMargins(400, 100, 12);
 
