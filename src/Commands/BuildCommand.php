@@ -159,7 +159,7 @@ class BuildCommand extends Command
         $html = str_replace('<h2>', '[break]<h2>', $html);
         $html = str_replace("</h1>\n[break]<h2>", '</h1><h2>', $html);
 
-        $html = str_replace("{indent}", "&nbsp;&nbsp;&nbsp;&nbsp;");
+        $html = str_replace("{indent}", "&nbsp;&nbsp;&nbsp;&nbsp;", $html);
         $html = str_replace("<blockquote>\n<p>{notice}", "<blockquote class='notice'><p>", $html);
         $html = str_replace("<blockquote>\n<p>{warning}", "<blockquote class='warning'><p>", $html);
         $html = str_replace("<blockquote>\n<p>{quote}", "<blockquote class='quote'><p>", $html);
