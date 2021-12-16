@@ -212,7 +212,7 @@ class BuildCommand extends Command
 
         $pdf->SetMargins(400, 100, 12);
 
-        if ($this->disk->isFile($currentPath.'/assets/cover.jpg')) {
+        if ($this->disk->isFile($currentPath.'/assets/cover.png')) {
             $this->output->writeln('<fg=yellow>==></> Adding Book Cover ...');
 
             $coverPosition = $config['cover']['position'] ?? 'position: absolute; left:0; right: 0; top: -.2; bottom: 0;';
