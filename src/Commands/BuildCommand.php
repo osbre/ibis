@@ -221,7 +221,7 @@ class BuildCommand extends Command
             $pdf->WriteHTML(
                 <<<HTML
 <div style="{$coverPosition}">
-    <img src="assets/cover.jpg" style="{$coverDimensions}"/>
+    <img src="assets/cover.png" style="{$coverDimensions}"/>
 </div>
 HTML
             );
